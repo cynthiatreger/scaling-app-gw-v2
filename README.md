@@ -7,8 +7,10 @@ Each [instance](https://learn.microsoft.com/en-us/azure/application-gateway/unde
 A single [capacity unit](https://learn.microsoft.com/en-us/azure/application-gateway/understanding-pricing#capacity-unit) is composed of **1 compute unit + 2500 persistent connections + 2,22 Mbps of throughput**:
 
 - Each [compute unit](https://learn.microsoft.com/en-us/azure/application-gateway/understanding-pricing#compute-unit) supports ~50 connection requests/sec (10 with WAFv2)
-- As stated: <img width="639" alt="image" src="https://user-images.githubusercontent.com/110976272/217456836-0f1849e5-e82c-4ca1-b1d8-6084f847c13a.png">
-if any of the 3 above parameters (compute unit capacity, # connections, throughput) is exceeded, additional capacity units get triggered.
+- As stated: 
 
+&emsp;<img width="639" alt="image" src="https://user-images.githubusercontent.com/110976272/217456836-0f1849e5-e82c-4ca1-b1d8-6084f847c13a.png">
+
+&emsp;if any of the 3 above parameters (compute unit capacity, # connections, throughput) is exceeded, additional capacity units get triggered.
 
 See [Application Gateway high traffic volume support | Microsoft Learn](https://learn.microsoft.com/en-us/azure/application-gateway/high-traffic-support#scaling-for-application-gateway-v1-sku-standardwaf-sku) for further recommandations (max instance count set to 125 + min instance count based on the average compute unit usage).
