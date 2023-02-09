@@ -14,3 +14,5 @@ A single [capacity unit](https://learn.microsoft.com/en-us/azure/application-gat
 &emsp;if any of the 3 above parameters (compute unit capacity, # connections, throughput) is exceeded, additional capacity units get triggered.
 
 See [Application Gateway high traffic volume support | Microsoft Learn](https://learn.microsoft.com/en-us/azure/application-gateway/high-traffic-support#scaling-for-application-gateway-v1-sku-standardwaf-sku) for further recommandations (max instance count set to 125 + min instance count based on the average compute unit usage).
+
+For a deep dive on Application Gateway, checkout this great [AppGW MicroHack](https://github.com/dawlysd/azure-application-gateway-microhack) by [David Santiago](https://github.com/dawlysd)!
