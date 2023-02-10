@@ -1,6 +1,6 @@
 # Scaling with Azure Application Gateway v2
 
-## Microsoft documentation recap
+### Microsoft documentation summary:
 
 The AppGW autoscaling SKU (v2) can scale up to **125 instances** (see [App GW limits](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#application-gateway-limits)).
 
@@ -16,20 +16,14 @@ A single [capacity unit](https://learn.microsoft.com/en-us/azure/application-gat
 :arrow_right: See [Application Gateway high traffic volume support | Microsoft Learn](https://learn.microsoft.com/en-us/azure/application-gateway/high-traffic-support#scaling-for-application-gateway-v1-sku-standardwaf-sku) for further recommandations (max instance count set to 125 + min instance count based on the average compute unit usage).
 
 💡 For a deep dive on Application Gateway, check out this great [AppGW MicroHack](https://github.com/dawlysd/azure-application-gateway-microhack) by [David Santiago](https://github.com/dawlysd)!
-##
-## Capacity Unit baseline
 
-| Capacity unit | Compute unit | Persistent connections | Throughput (Mbps) | Connection requests/sec (Standard v2) | Connection request/sec (WAF v2) |
-|---|---|---|---|---|---|
-| 1 | 1 | 2500 | 2,22 | 50 | 10|
-
-## Scaling table
+### Scaling table:
 
 | Instance | (Min) capacity unit | Persistent connections | Throughput | Connection requests/sec (Standard v2) | Connection request/sec (WAF v2) |
 |---|---|---|---|---|---|
-| 1 | 10 | 25000 | 22 Mbps | 500 | 100 |
-| 25 | 250 | 625,000 | 555 Mbps | 12,500 | 2,500 |
-| 50 | 500 | 1,250,000 | 1,11 Gbps | 25,000 | 5,000 |
-| 75 | 750 | 1,875,000 | 1,665 Gbps | 37,500 | 7,500 |
-| 100 | 1000 | 2,500,000 | 2,22 Gbps | 50,000 | 10,000 |
-| 125 | 1250 | 3,125,000 | 2,775 Gbps | 62,500 |12,500 |
+| 1 | 10 | 25 000 | 22 Mbps | 500 | 100 |
+| 25 | 250 | 625 000 | 555 Mbps | 12 500 | 2 500 |
+| 50 | 500 | 1 250 000 | 1,11 Gbps | 25 000 | 5 000 |
+| 75 | 750 | 1 875 000 | 1,665 Gbps | 37 500 | 7 500 |
+| 100 | 1 000 | 2 500 000 | 2,22 Gbps | 50 000 | 10 000 |
+| 125 | 1 250 | 3 125 000 | 2,775 Gbps | 62 500 |12 500 |
